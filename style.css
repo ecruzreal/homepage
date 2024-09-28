@@ -91,7 +91,7 @@ header::before{
 
 .projects-grid{
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(400px, 1fr));
     grid-template-rows: repeat(3 auto);
     gap: 3rem;
     padding: 2rem;
@@ -105,10 +105,10 @@ header::before{
 }
 
 .project-card{
-    border: 1px solid black;
     height: 20vh;
-    width: 200px;
-    height: 235px;
+    width: 400px;
+    height: 435px;
+    box-shadow: 3px 3px 10px rgba(158, 158, 158, 0.697);
 }
 
 .project-heading{
@@ -116,15 +116,16 @@ header::before{
     justify-content: space-between;
 }
 
-.project-heading > h4{
+.project-heading > h3{
     margin: 0;
     padding: 0;
+
 }
 
 .project-content{
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-top: .3rem;
+    margin-top: .5rem;
 }
 
 .screenshot{
@@ -132,30 +133,31 @@ header::before{
     height: 55%;
     justify-content: center;
     align-items: center;
+    font-size: 2rem;
 }
 
 .project-desc{
-    font-size: smaller;
+    font-size: 1rem;
 }
 
 .project-links > a > img{
-    height: 1rem;
+    height: 1.5rem;
 }
 
 .project-card.p1 > .screenshot{
-    background-color: aliceblue;
+    background-color: rgb(179, 213, 242);
 }
 
 .project-card.p2 > .screenshot{
-    background-color: red;
+    background-color: rgb(241, 117, 117);
 }
 
 .project-card.p3 > .screenshot{
-    background-color: green;
+    background-color: rgb(84, 151, 84);
 }
 
 .project-card.p4 > .screenshot{
-    background-color: orange;
+    background-color: rgb(238, 192, 107);
 }
 
 .project-card.p5 > .screenshot{
@@ -163,5 +165,5 @@ header::before{
 }
 
 .project-card.p6 > .screenshot{
-    background-color: purple;
+    background-color: rgb(197, 130, 197);
 }
