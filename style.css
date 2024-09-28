@@ -92,14 +92,14 @@ header::before{
 .projects-grid{
     display: grid;
     grid-template-columns: repeat(3, minmax(400px, 1fr));
-    grid-template-rows: repeat(3 auto);
+    grid-template-rows: repeat(3, auto);
     gap: 3rem;
     padding: 2rem;
 }
 
 .work{
     grid-row: 1 / 2;
-    grid-column: 1 / 4;
+    grid-column: 1 / -1;
     margin: 0;
     padding: 0;
 }
@@ -166,4 +166,22 @@ header::before{
 
 .project-card.p6 > .screenshot{
     background-color: rgb(197, 130, 197);
+}
+
+/* tablet formatting */
+@media(max-width: 1000px){
+
+    .projects-grid{
+        grid-template-columns: repeat(2, minmax(400px, 1fr));
+    }
+
+}
+
+/* mobile formatting */
+@media(max-width: 500px){
+
+    .projects-grid{
+        grid-template-columns: repeat(1, minmax(400px, 1fr));
+    }
+
 }
