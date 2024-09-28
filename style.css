@@ -5,6 +5,7 @@ body{
     overflow-x: hidden;
 }
 
+/* HEADER */
 header{
     display: flex;
     height: 40vh;
@@ -78,4 +79,24 @@ header::before{
 
 .h-butt{
     height: 1rem;
+}
+
+/* PROJECT CARDS */
+.grid-container{
+    display: flex;
+    justify-content: center;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(2 auto);
+    gap: 5rem;
+}
+
+.project-card{
+    background-color: green;
+    height: 20vh;
+    width: 200px;
+    height: 235px;
 }
