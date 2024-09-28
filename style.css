@@ -92,11 +92,67 @@ header::before{
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     grid-template-rows: repeat(2 auto);
     gap: 5rem;
+    padding: 2rem;
 }
 
 .project-card{
-    background-color: green;
+    border: 1px solid black;
     height: 20vh;
     width: 200px;
     height: 235px;
+}
+
+.project-heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-heading > h4{
+    margin: 0;
+    padding: 0;
+}
+
+.project-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: .3rem;
+}
+
+.screenshot{
+    display: flex;
+    height: 55%;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-desc{
+    font-size: smaller;
+}
+
+.project-links > a > img{
+    height: 1rem;
+}
+
+.project-card.p1 > .screenshot{
+    background-color: aliceblue;
+}
+
+.project-card.p2 > .screenshot{
+    background-color: red;
+}
+
+.project-card.p3 > .screenshot{
+    background-color: green;
+}
+
+.project-card.p4 > .screenshot{
+    background-color: orange;
+}
+
+.project-card.p5 > .screenshot{
+    background-color: pink;
+}
+
+.project-card.p6 > .screenshot{
+    background-color: purple;
 }
