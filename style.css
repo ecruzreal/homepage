@@ -1,5 +1,6 @@
 
 body{
+    align-items: center;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -9,14 +10,23 @@ body{
 /* HEADER */
 header{
     display: flex;
-    height: 90vh;
+    height: 40em;
     overflow: hidden;
+    overflow-x: hidden;
     justify-content: center;
+}
+
+.tablet-text{
+    display: none;
 }
 
 .header-box{
     display: flex;
-    margin-top: 3rem;
+    margin-top: 8rem;
+    height: 25em;
+    width: 70em;
+    background-color: white;
+    box-shadow: 2px 3px 10px rgb(78, 78, 78);
 }
 
 header::before{
@@ -31,13 +41,12 @@ header::before{
     transform: rotate(-10deg); /* Adjust the tilt angle */
     z-index: -1; /* Send it behind the content */
      transform-origin: top left; /* Pivot point of the rotation */
-    width: 120%; /* Make it slightly wider to cover the tilt */
-    height: 90vh;
+    height: 35em;
 }
 
 #header-img{
-    height: 70vh;
-    position: absolute;
+    height: 30em;
+    box-shadow: 2px 3px 10px rgb(103, 103, 103);
 }
 
 .img-name{
@@ -53,26 +62,26 @@ header::before{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 70vh;
-    max-height: 70vh;
+    max-height: 40em;
+    width: 40em;
     position: relative;
-    box-shadow: 2px 3px 10px rgb(103, 103, 103);
-    z-index: 1;
 }
 
-.header-inner{
-    display: flex;
-    justify-content: center;
-    height: 70vh;
+.right-side{
+    padding: 1rem;
 }
 
+.right-side > p{
+    color: rgb(198, 198, 198);
+}
+
+/*
 .header-text{
     margin-top: 2.3rem;
-    position: relative;
     padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    width: 70vh;
+    width: 90vh;
     height: 55vh;
     min-width: 40vh;
     background-color: white;
@@ -82,9 +91,9 @@ header::before{
 .header-text > p{
     line-height: 1.8rem;
 }
+*/
 
 .header.buttons{
-    margin-top: 7.5rem;
     position: relative;
     display: flex;
     bottom: 0;
@@ -106,7 +115,7 @@ header::before{
 
 .projects-grid{
     display: grid;
-    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-template-rows: repeat(3, auto);
     gap: 3rem;
     padding: 2rem;
@@ -120,9 +129,9 @@ header::before{
 }
 
 .project-card{
-    height: 20vh;
-    width: 400px;
-    height: 435px;
+    height: 10em;
+    width: 300px;
+    height: 335px;
     box-shadow: 3px 3px 10px rgba(158, 158, 158, 0.697);
 }
 
@@ -149,6 +158,7 @@ header::before{
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    text-align: center;
 }
 
 .project-desc{
@@ -183,13 +193,14 @@ header::before{
     background-color: rgb(197, 130, 197);
 }
 
+/* FOOTER */
 footer{
     background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    height: 60vh;
+    height: 30em;
 }
 
 .contact-me{
@@ -204,7 +215,7 @@ footer{
 }
 
 .contact-me > p{
-    width: 25vw;
+    width: 15em;
 }
 
 .phone-number > img,
@@ -229,15 +240,110 @@ footer{
     gap: 1.5rem;
 }
 
-footer > img{
-    height: 50vh;
+.footer-img{
+    height: 25em;
 }
 
 /* tablet formatting */
 @media(max-width: 1000px){
 
+    header::before{
+        width: 115%;
+        top: -12em;
+        left: -12em;
+    }
+
     .projects-grid{
-        grid-template-columns: repeat(2, minmax(400px, 1fr));
+        grid-template-columns: repeat(2, minmax(280px, 1fr));
+    }
+
+    .project-card{
+        width: 280px;
+        height: 310px;
+    }
+
+    .header-box{
+        display: none;
+    }
+
+    .tablet-text{
+        display: block;
+        width: 35em;
+        height: 20em;
+        background-color: white;
+        position: relative;
+        top: 20%;
+        padding: 1rem;
+        box-shadow: 2px 3px 10px rgb(103, 103, 103);
+    }
+
+    .tablet-top > h1{
+        position: relative;
+        top: 35%;
+        right: -90%;
+    }
+
+    .tablet-text > p{
+       font-size: 1rem;
+       color: rgb(198, 198, 198);
+    }
+
+    #tablet-img{
+        height: 23em;
+        box-shadow: 2px 3px 10px rgb(103, 103, 103);
+    }
+
+    .tablet-top{
+        position: static;
+        height: 23em;
+        min-width: 23em;
+        float: inline-start;
+        margin-top: -13rem;
+        margin-right: 1rem;
+        margin-left: -3rem;
+        margin-bottom: 5rem;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+    /*
+
+    .header-box{
+        width: 65vw;
+        height: 50vh;
+        min-width: 600px;
+    }
+
+    #header-img{
+        height: 50vh;
+    }
+
+    .header-top{
+        height: 50vh;
+        min-width: 50vh;
+        float: left;
+        top: -30%;
+        left: -7%;
+    }
+
+    .header-text{
+        margin-top: 5rem;
+        margin-right: 8rem;
+        width: 90vh;
+        height: 45vh;
+        min-width: 60vh;
+    }
+
+    .header-text > p{
+        text-wrap: wrap;
+    }
+    */
+    .header.buttons{
+        visibility: hidden;
     }
 
 }
@@ -247,6 +353,7 @@ footer > img{
 
     .projects-grid{
         grid-template-columns: repeat(1, minmax(400px, 1fr));
+        padding: .5rem;
     }
 
 }
