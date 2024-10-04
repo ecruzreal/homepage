@@ -9,6 +9,7 @@ body{
 
 /* HEADER */
 header{
+    position: relative;
     display: flex;
     height: 40em;
     overflow: hidden;
@@ -29,6 +30,17 @@ header{
     box-shadow: 2px 3px 10px rgb(78, 78, 78);
 }
 
+.background-decor{
+    position: absolute;
+    background-color: lightblue;
+    height: 60em;
+    width: 120%;
+    z-index: -1;
+    top: -33em;
+    transform: rotate(-10deg);
+}
+
+/*
 header::before{
     content: '';
     position: absolute;
@@ -37,12 +49,13 @@ header::before{
     left: -120px;
     right: 0;
     bottom: 0;
-    background-color: lightblue; /* Background color of the tilt */
-    transform: rotate(-10deg); /* Adjust the tilt angle */
-    z-index: -1; /* Send it behind the content */
-     transform-origin: top left; /* Pivot point of the rotation */
+    background-color: lightblue;
+    transform: rotate(-10deg); 
+    z-index: -1; 
+     transform-origin: top left; 
     height: 35em;
 }
+*/
 
 #header-img{
     height: 30em;
@@ -245,12 +258,18 @@ footer{
 }
 
 /* tablet formatting */
-@media(max-width: 1000px){
-
+@media(max-width: 1180px){
+    /*
     header::before{
         width: 115%;
         top: -12em;
         left: -12em;
+    }
+    */
+
+    .background-decor{
+        top: -37em;
+        left: -10em;
     }
 
     .projects-grid{
