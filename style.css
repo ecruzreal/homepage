@@ -12,7 +12,6 @@ header{
     position: relative;
     display: flex;
     height: 40em;
-    overflow: hidden;
     overflow-x: hidden;
     justify-content: center;
 }
@@ -32,30 +31,13 @@ header{
 
 .background-decor{
     position: absolute;
-    background-color: lightblue;
+    background-color: rgb(87, 138, 241);
     height: 60em;
-    width: 120%;
+    width: 150%;
     z-index: -1;
     top: -33em;
     transform: rotate(-10deg);
 }
-
-/*
-header::before{
-    content: '';
-    position: absolute;
-    overflow: hidden;
-    top: -20px;
-    left: -120px;
-    right: 0;
-    bottom: 0;
-    background-color: lightblue;
-    transform: rotate(-10deg); 
-    z-index: -1; 
-     transform-origin: top left; 
-    height: 35em;
-}
-*/
 
 #header-img{
     height: 30em;
@@ -85,7 +67,7 @@ header::before{
 }
 
 .right-side > p{
-    color: rgb(198, 198, 198);
+    color: rgb(121, 121, 121);
 }
 
 /*
@@ -124,6 +106,7 @@ header::before{
 .grid-container{
     display: flex;
     justify-content: center;
+    margin: 2rem;
 }
 
 .projects-grid{
@@ -131,7 +114,6 @@ header::before{
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-template-rows: repeat(3, auto);
     gap: 3rem;
-    padding: 2rem;
 }
 
 .work{
@@ -208,12 +190,14 @@ header::before{
 
 /* FOOTER */
 footer{
-    background-color: lightblue;
+    background-color: rgb(87, 138, 241);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
     height: 30em;
+    margin-top: 5rem;
 }
 
 .contact-me{
@@ -259,13 +243,6 @@ footer{
 
 /* tablet formatting */
 @media(max-width: 1180px){
-    /*
-    header::before{
-        width: 115%;
-        top: -12em;
-        left: -12em;
-    }
-    */
 
     .background-decor{
         top: -37em;
@@ -297,9 +274,11 @@ footer{
     }
 
     .tablet-top > h1{
+        color: white;
+        text-shadow: 2px 2px 5px rgb(0, 0, 0);
         position: relative;
         top: 35%;
-        right: -90%;
+        right: -105%;
     }
 
     .tablet-text > p{
@@ -329,38 +308,6 @@ footer{
         display: table;
       }
 
-    /*
-
-    .header-box{
-        width: 65vw;
-        height: 50vh;
-        min-width: 600px;
-    }
-
-    #header-img{
-        height: 50vh;
-    }
-
-    .header-top{
-        height: 50vh;
-        min-width: 50vh;
-        float: left;
-        top: -30%;
-        left: -7%;
-    }
-
-    .header-text{
-        margin-top: 5rem;
-        margin-right: 8rem;
-        width: 90vh;
-        height: 45vh;
-        min-width: 60vh;
-    }
-
-    .header-text > p{
-        text-wrap: wrap;
-    }
-    */
     .header.buttons{
         visibility: hidden;
     }
@@ -368,11 +315,90 @@ footer{
 }
 
 /* mobile formatting */
-@media(max-width: 500px){
+@media(max-width: 650px){
+
+    header{
+        height: 55em;
+    }
+
+    .right-side{
+        text-align: center;
+    }
+
+    .header.buttons{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+        visibility: visible;
+    }
+
+    .background-decor{
+        top: -45em;
+        left: -12em;
+        transform: rotate(-20deg);
+    }
+
+    .tablet-text{
+        display: none;
+    }
+
+    .header-box{
+        display: flex;
+        flex-direction: column;
+        width: 15em;
+        margin-top: 1.5rem;
+    }
+
+    .right-side > p{
+        color: rgb(61, 61, 61);
+    }
+
+    .header-top{
+        width: 15em;
+    }
+
+
+    #header-img{
+        height: 25em;
+    }
+
 
     .projects-grid{
-        grid-template-columns: repeat(1, minmax(400px, 1fr));
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
         padding: .5rem;
+    }
+
+    .project-card{
+        width: 300px;
+    }
+
+    footer{
+        position: relative;
+        height: 65em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-x: hidden;
+    }
+
+    .contact-me{
+        margin-top: 2rem;
+        gap: 1rem;
+    }
+
+    .contact-me > h2{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .footer-buttons{
+        justify-content: center;
+    }
+
+
+    .footer-img{
+        position: relative;
+        height: 36em;
     }
 
 }

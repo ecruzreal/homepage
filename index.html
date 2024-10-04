@@ -24,10 +24,12 @@
             </p>
         </div>
         <div class="header-box">
-            <div class="header-top">
-                <img src="img/Screenshot 2024-09-28 at 12.55.42 AM.png" alt="" id="header-img">
+            <picture class="header-top">
                 <span class="img-name">John Doe</span>
-            </div>
+                <source srcset="img/Screenshot 2024-09-28 at 12.55.42 AM.png" media="(min-width:650px)">
+                <source srcset="img/mobile-header.png" media="(max-width:650px)">
+                <img src="img/Screenshot 2024-09-28 at 12.55.42 AM.png" alt="Business man taking a phone call" id="header-img">
+            </picture>
             <div class="right-side">
                 <h1>About me</h1>
                 <p>
